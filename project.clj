@@ -10,6 +10,10 @@
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  
-                 [com.jme3-lib/lwjgl-natives "2.9.0"]
-                 [com.jme3-lib/lwjgl "2.9.0"]
-                 ])
+                 [com.jme3-lib/lwjgl-natives "2.9.0" :native-prefix ""]
+                 [com.jme3-lib/lwjgl "2.9.0" :native-prefix ""]
+                 ]
+  
+;  :native-path "target/native/native/windows"                      ; << !!! uncomment this ONLY AFTER you have already done lein compile or lein repl, so that you ALREADY DO have the `target` dir 
+;  :jvm-opts ["-Djava.library.path=target/native/native/windows"]   ; << this is not actually required, leave it commented
+  )
